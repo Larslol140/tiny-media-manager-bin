@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Name=Tiny Media Manager
+Exec=/usr/bin/PKGNAME
+Icon=/usr/share/PKGNAME/tmm.png
+Comment=DESCRIPTION
+Categories=AudioVideo;Video;Database;Java;
+Version=VERSION
