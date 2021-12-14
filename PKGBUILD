@@ -6,7 +6,7 @@
 # Maintainer: Your Name <youremail@domain.com>
 pkgname=tiny-media-manager-bin
 pkgver=4.2.4
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="A multi-OS media management tool"
 arch=("any")
@@ -18,7 +18,7 @@ checkdepends=()
 optdepends=()
 provides=()
 conflicts=("tiny-media-manager")
-replaces=("tiny-media-manager")
+replaces=()
 backup=()
 options=()
 install=
@@ -36,7 +36,7 @@ sha256sums=(
 package() {
 	dstdir="${pkgdir}/usr/share/${pkgname}"
   mkdir -p "$dstdir"
-  tar -xvf "${pkgname}-${pkgver}.tar.gz" --directory "$dstdir" --strip-components 1
+  tar -xvf "${pkgname}-${pkgver}.tar.gz" --exclude="data" --directory "$dstdir" --strip-components 1
   
   mv "generic.desktop" "${pkgname}.desktop"
   sed -i "s/VERSION/${pkgver}/" "${pkgname}.desktop"
@@ -44,6 +44,10 @@ package() {
   sed -i "s/PKGNAME/${pkgname}/" "${pkgname}.desktop"
 
   install -D "${srcdir}/${pkgname}.desktop" "${pkgdir}/usr/share/applications/${pkgname}.desktop"
+  
   mkdir -p "${pkgdir}/usr/bin"
-  ln -s "${dstdir}/tinyMediaManager" "${pkgdir}/usr/bin/${pkgname}"
+  mkdir -p "${pkgdir}/etc/${pkgname}"
+
+  ln -srf "${dstdir}/tinyMediaManager" "${pkgdir}/usr/bin/${pkgname}"
+  ln -srf "${pkgdir}/etc/${pkgname}" "${dstdir}/data"
 }
