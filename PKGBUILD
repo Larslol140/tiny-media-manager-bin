@@ -29,7 +29,7 @@ source=(
 )
 noextract=("${pkgname}-${pkgver}.tar.gz")
 sha256sums=(
-  "132f5528acc00beb2c5979dd37cb92c8a523e628deea23e6f69e711efae482dc"
+  "c58453c21a0c4561575eab7c9ac96327be1e190dc330edfb87d2f23f87ed24e3"
   "443e215a98ded0e4be592ae87e7a89dd07f2ce3aca9dba3cf0a85964617a2b45"
 )
 
