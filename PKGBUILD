@@ -5,7 +5,7 @@
 
 # Maintainer: Your Name <youremail@domain.com>
 pkgname=tiny-media-manager-bin
-pkgver=4.2.5.1
+pkgver=4.2.6
 pkgrel=1
 epoch=
 pkgdesc="A multi-OS media management tool"
