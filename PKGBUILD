@@ -5,7 +5,7 @@
 
 # Maintainer: Your Name <youremail@domain.com>
 pkgname=tiny-media-manager-bin
-pkgver=4.2.6
+pkgver=4.2.8
 pkgrel=1
 epoch=
 pkgdesc="A multi-OS media management tool"
@@ -29,7 +29,7 @@ source=(
 )
 noextract=("${pkgname}-${pkgver}.tar.gz")
 sha256sums=(
-  "c58453c21a0c4561575eab7c9ac96327be1e190dc330edfb87d2f23f87ed24e3"
+  "e2304db6778a511129920febe15335a92ab18d3910ededb13247ec0e922891a9"
   "443e215a98ded0e4be592ae87e7a89dd07f2ce3aca9dba3cf0a85964617a2b45"
 )
 
